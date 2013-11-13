@@ -1,6 +1,4 @@
 My VIM
 ========
 
-个人vimrc的设置
-
-Bundle插件管理
+window 7 下的vim配置和插件
