@@ -1,8 +1,8 @@
-source $VIM/bundles.vim
-" Vim ±ê×¼³£¹æÅäÖÃ
+ï»¿source $VIM/bundles.vim
+" Vim æ ‡å‡†å¸¸è§„é…ç½®
 
 "------------------------------------------------
-" ¿ÉÒÔÔÚlocaleºÍÎÄ¼ş±àÂë²»Í¬Ê±×Ô¶¯¼ì²â²¢Ñ¡ÔñÕıÈ·±àÂë 
+" å¯ä»¥åœ¨localeå’Œæ–‡ä»¶ç¼–ç ä¸åŒæ—¶è‡ªåŠ¨æ£€æµ‹å¹¶é€‰æ‹©æ­£ç¡®ç¼–ç  
 " Encoding setting
 "------------------------------------------------
 if has("multi_byte")
@@ -48,7 +48,7 @@ else
     echoerr "Sorry, this version of (g)vim was not compiled with multi_byte"
 endif
 
-" ÉèÖÃ¿í¶È²»Ã÷µÄÎÄ×ÖÎªË«¿í¶ÈÎÄ±¾
+" è®¾ç½®å®½åº¦ä¸æ˜çš„æ–‡å­—ä¸ºåŒå®½åº¦æ–‡æœ¬
 "if v:lang =~? '^\(zh\)\|\(ja\)\|\(ko\)'
 "    set ambiwidth=double
 "endif
@@ -101,7 +101,7 @@ else
   set wrap
 endif
 
-" Ä¬ÈÏ×ÖÌåÉèÖÃ
+" é»˜è®¤å­—ä½“è®¾ç½®
 if g:OS#win
     set guifont=Courier_New:h12:cANSI
 elseif g:OS#mac
@@ -109,7 +109,7 @@ elseif g:OS#mac
 elseif g:OS#unix
 endif
 
-"½â¾öÖĞÎÄ²Ëµ¥ÂÒÂë
+"è§£å†³ä¸­æ–‡èœå•ä¹±ç 
 set langmenu=zh_CN.utf-8
 source $VIMRUNTIME/delmenu.vim
 source $VIMRUNTIME/menu.vim
@@ -133,7 +133,7 @@ else
     set directory=~/.tmp
 endif
 
-" ³Ö¾Ã»¯³·ÏúÉèÖÃ¡£
+" æŒä¹…åŒ–æ’¤é”€è®¾ç½®ã€‚
 if has("persistent_undo")
     set undofile
     set undolevels=1000
@@ -150,7 +150,7 @@ endif
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Text, tab and indent related
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-set nocompatible  " ¹Ø±ÕÓëVIµÄ¼æÈİ
+set nocompatible  " å…³é—­ä¸VIçš„å…¼å®¹
 set history=1000
 set nofoldenable  "disable folding
 set confirm       " prompt when existing from an unsaved file
@@ -179,8 +179,8 @@ set nowrap         " dont wrap lines
 set scrolloff=5    " 5 lines above/below cursor when scrolling
 
 set number          " show line nubers
-set ruler           " ´ò¿ª×´Ì¬À¸±ê³ß
-set cursorline      "Í»³öÏÔÊ¾µ±Ç°ĞĞ
+set ruler           " æ‰“å¼€çŠ¶æ€æ æ ‡å°º
+set cursorline      "çªå‡ºæ˜¾ç¤ºå½“å‰è¡Œ
 set showmatch       " show matching bracket (briefly jump)
 set showcmd         " show typed command in status bar
 set title           " show file in titlebar
@@ -190,25 +190,25 @@ set matchpairs+=<:> " specially for html
 
 " Default Indectation
 set expandtab      " expand tab to space
-set tabstop=4      "ÉèÖÃtab width Îª 4
+set tabstop=4      "è®¾ç½®tab width ä¸º 4
 set softtabstop=4 
-set shiftwidth=4   " »»ĞĞÊ±ĞĞ¼ä½»´íÊ¹ÓÃ4¸ö¿Õ¸ñ
+set shiftwidth=4   " æ¢è¡Œæ—¶è¡Œé—´äº¤é”™ä½¿ç”¨4ä¸ªç©ºæ ¼
 set smarttab
-set smartindent    " ÖÇÄÜ¶ÔÆë·½Ê½
-set autoindent     " Ê¹ÓÃ×Ô¶¯Ëõ½ø
+set smartindent    " æ™ºèƒ½å¯¹é½æ–¹å¼
+set autoindent     " ä½¿ç”¨è‡ªåŠ¨ç¼©è¿›
 
 " search
-set ignorecase     " ËÑË÷Ê±²»Çø·Ö´ïĞ¡Çø set noic ÎªÇø·Ö
-set incsearch      " ËÑË÷Ê±×Ô¶¯¶¨Î»
-set hlsearch       " ¸ßÁÁËÑË÷
+set ignorecase     " æœç´¢æ—¶ä¸åŒºåˆ†è¾¾å°åŒº set noic ä¸ºåŒºåˆ†
+set incsearch      " æœç´¢æ—¶è‡ªåŠ¨å®šä½
+set hlsearch       " é«˜äº®æœç´¢
 
-set autochdir      " ×Ô¶¯ÇĞ»»¹¤×÷Ä¿Â¼
+set autochdir      " è‡ªåŠ¨åˆ‡æ¢å·¥ä½œç›®å½•
 set magic
 
 set splitright
 "set splitbelow
 
-" ÎÄ¼ş¸ñÊ½£¬Ä¬ÈÏ ffs=dos,unix
+" æ–‡ä»¶æ ¼å¼ï¼Œé»˜è®¤ ffs=dos,unix
 set fileformat=unix
 set fileformats=unix,dos,mac
 
@@ -229,7 +229,7 @@ let g:html_indent_script1 = "inc"
 let g:html_indent_style1 = "inc"
 
 
-" Çå³ıµ±Ç°ÎÄ¼şµÄËùÓĞÎ²Ëæ¿Õ¸ñ
+" æ¸…é™¤å½“å‰æ–‡ä»¶çš„æ‰€æœ‰å°¾éšç©ºæ ¼
 nnoremap <leader>W :%s/\s\+$//<cr>:let @/=''<CR>
 
 
@@ -237,9 +237,9 @@ nnoremap <leader>W :%s/\s\+$//<cr>:let @/=''<CR>
 nnoremap <leader>ev <C-w><C-v><C-l>:e $MYVIMRC<cr>
 nmap <leader>sv :so $MYVIMRC<cr>
 
-set autoread            " ÎÄ¼ş±»Íâ²¿¸Ä±äÊ±×Ô¶¯ÖØĞÂ¶ÁÈ¡
+set autoread            " æ–‡ä»¶è¢«å¤–éƒ¨æ”¹å˜æ—¶è‡ªåŠ¨é‡æ–°è¯»å–
 
-" ×Ô¶¯ÔØÈë _vimrc, ĞŞ¸Äºó²»ĞèÖØÆô
+" è‡ªåŠ¨è½½å…¥ _vimrc, ä¿®æ”¹åä¸éœ€é‡å¯
 autocmd! bufwritepost _vimrs source %
 "-------------------------------------------------------------------
 " Plugin setting
@@ -247,7 +247,7 @@ autocmd! bufwritepost _vimrs source %
 
 " fencview
 "-----------------------------
-"×Ô¶¯¼ì²âencoding²å¼ş fencview
+"è‡ªåŠ¨æ£€æµ‹encodingæ’ä»¶ fencview
 let g:fencview_autodetect = 0
 
 " NeoComplCache
@@ -344,21 +344,21 @@ let g:vimwiki_list = [{'path': 'D:/My Dropbox/MyWiki/VimWiki/',
 \ 'diary_link_count': 5}]
 
 let g:vimwiki_menu = ''
-" ÊÇ·ñÔÚ¼ÆËã×Ö´®³¤¶ÈÊ±ÓÃÌØ±ğ¿¼ÂÇÖĞÎÄ×Ö·û
+" æ˜¯å¦åœ¨è®¡ç®—å­—ä¸²é•¿åº¦æ—¶ç”¨ç‰¹åˆ«è€ƒè™‘ä¸­æ–‡å­—ç¬¦
 let g:vimwiki_CJK_length = 1
-" ±ê¼ÇÎªÍê³ÉµÄ checklist ÏîÄ¿»áÓĞÌØ±ğµÄÑÕÉ«
+" æ ‡è®°ä¸ºå®Œæˆçš„ checklist é¡¹ç›®ä¼šæœ‰ç‰¹åˆ«çš„é¢œè‰²
 let g:vimwiki_hl_cb_checked = 1
-" ´ò¿ªwikiÈÕ¼ÇÎÄ¼ş
+" æ‰“å¼€wikiæ—¥è®°æ–‡ä»¶
 map <Leader>d <Plug>VimwikiMakeDiaryNote
-" tab ´ò¿ªwikiÈÕ¼ÇÎÄ¼ş
+" tab æ‰“å¼€wikiæ—¥è®°æ–‡ä»¶
 map <Leader>dt <Plug>VimwikiTabMakeDiaryNote
-" ÇĞ»»ÁĞ±íÏîµÄ¿ª¹Ø£¨Ñ¡ÖĞ/·´Ñ¡£©<C-Space>ÊÇÖĞÎÄÊäÈë·¨ÇĞ»»ÈÈ¼ü£¬¹ÊÖØĞÂÓ³Éä
+" åˆ‡æ¢åˆ—è¡¨é¡¹çš„å¼€å…³ï¼ˆé€‰ä¸­/åé€‰ï¼‰<C-Space>æ˜¯ä¸­æ–‡è¾“å…¥æ³•åˆ‡æ¢çƒ­é”®ï¼Œæ•…é‡æ–°æ˜ å°„
 map <Leader>tt <Plug>VimwikiToggleListItem
 
-" "    zencoding ÉèÖÃ
+" "    zencoding è®¾ç½®
 " "-----------------------------------
 " let g:user_zen_leader_key = '<c-y>'
-" "let g:use_zen_complete_tag = 1  "×Ô¶¯²¹È«
+" "let g:use_zen_complete_tag = 1  "è‡ªåŠ¨è¡¥å…¨
 " let g:SuperTabDefaultCompletionType = '<c-p>'
 
 "------------------
